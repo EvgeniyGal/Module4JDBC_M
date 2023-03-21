@@ -109,7 +109,7 @@ public class DatabaseQueryService {
                         .price(rs.getInt("PRICE")).build());
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+           return null;
         }
 
         return projectPrices;

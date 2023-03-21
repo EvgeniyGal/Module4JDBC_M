@@ -1,7 +1,5 @@
 package edu.goit.databaseutil;
 
-import lombok.Builder;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -19,15 +17,6 @@ class DatabaseTest {
     public static void setUp() {
         database = Database.getInstance();
         connection = database.getConnection();
-    }
-
-    @AfterAll
-    public static void shutDown(){
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
